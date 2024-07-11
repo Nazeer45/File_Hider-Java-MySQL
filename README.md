@@ -20,7 +20,30 @@ The **File Hider App** is a Java application that allows users to securely hide 
 
 1. **Clone the Repository:**
    - git clone url
-2. **Compile and Run:**
+  
+## Set Up the Database
+
+1. **Create a database named `File_Hider`.**
+2. **Use the following SQL script to create the required tables:**
+
+   ```sql
+   CREATE TABLE users (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     name VARCHAR(255),
+     email VARCHAR(255) UNIQUE
+   );
+
+   CREATE TABLE data (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     name VARCHAR(255),
+     path VARCHAR(255),
+     email VARCHAR(255),
+     bin_data TEXT,
+     FOREIGN KEY (email) REFERENCES users(email)
+   );
+
+     
+3. **Compile and Run:**
 - Compile the Java files:
   ```
   javac Main.java
@@ -30,7 +53,7 @@ The **File Hider App** is a Java application that allows users to securely hide 
   java Main
   ```
 
-3. **Follow the On-Screen Instructions:**
+4. **Follow the On-Screen Instructions:**
 - Choose option 1 to log in or option 2 to sign up.
 - Enter your email address.
 - Check your email for the OTP.
