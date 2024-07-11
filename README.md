@@ -19,7 +19,7 @@ The **File Hider App** is a Java application that allows users to securely hide 
 ## Usage
 
 1. **Clone the Repository:**
-   - git clone url
+   - git clone https://github.com/Nazeer45/File_Hider-Java-MySQL.git
   
 ## Set Up the Database
 
